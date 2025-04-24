@@ -1,0 +1,909 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Markaza Nurul Yaqiin Online Quran Academy - Student Portal
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Header / Navigation -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <a class="flex items-center space-x-3" href="#">
+     <img alt="Markaza Nurul Yaqiin Online Quran Academy logo, green and white with Quran book icon" class="h-12 w-12 rounded" height="48" src="https://storage.googleapis.com/a1aa/image/e2acc454-7f62-4ca4-147e-9beb0ce2008a.jpg" width="48"/>
+     <span class="text-xl font-semibold text-green-700">
+      Markaza Nurul Yaqiin
+     </span>
+    </a>
+    <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
+     <a class="hover:text-green-700 transition" href="#dashboard">
+      Dashboard
+     </a>
+     <a class="hover:text-green-700 transition" href="#schedule">
+      Class Schedule
+     </a>
+     <a class="hover:text-green-700 transition" href="#materials">
+      Lesson Materials
+     </a>
+     <a class="hover:text-green-700 transition" href="#live-class">
+      Live Class
+     </a>
+     <a class="hover:text-green-700 transition" href="#assignments">
+      Assignments
+     </a>
+     <a class="hover:text-green-700 transition" href="#progress">
+      Progress Tracker
+     </a>
+     <a class="hover:text-green-700 transition" href="#student-id">
+      Student ID
+     </a>
+     <a class="hover:text-green-700 transition" href="#notifications">
+      Notifications
+     </a>
+    </nav>
+    <div class="md:hidden">
+     <button aria-label="Toggle menu" class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-700" id="mobile-menu-button">
+      <i class="fas fa-bars fa-lg">
+      </i>
+     </button>
+    </div>
+   </div>
+   <nav class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
+    <a class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-700 font-medium" href="#dashboard">
+     Dashboard
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-700 font-medium" href="#schedule">
+     Class Schedule
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-700 font-medium" href="#materials">
+     Lesson Materials
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-700 font-medium" href="#live-class">
+     Live Class
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-700 font-medium" href="#assignments">
+     Assignments
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-700 font-medium" href="#progress">
+     Progress Tracker
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-700 font-medium" href="#student-id">
+     Student ID
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-700 font-medium" href="#notifications">
+     Notifications
+    </a>
+   </nav>
+  </header>
+  <!-- Main Content -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+   <!-- Login / Registration Section -->
+   <section class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mb-12" id="login-registration">
+    <h2 class="text-2xl font-semibold text-green-700 mb-6 text-center">
+     Student Login / Registration
+    </h2>
+    <div class="flex justify-center mb-6 space-x-4">
+     <button class="px-4 py-2 font-semibold text-green-700 border-b-2 border-green-700 focus:outline-none" id="login-tab">
+      Login
+     </button>
+     <button class="px-4 py-2 font-semibold text-gray-500 hover:text-green-700 focus:outline-none border-b-2 border-transparent hover:border-green-700" id="register-tab">
+      Register
+     </button>
+    </div>
+    <form class="space-y-4" id="login-form">
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="login-email">
+       Email
+      </label>
+      <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="login-email" name="login-email" placeholder="you@example.com" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="login-password">
+       Password
+      </label>
+      <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="login-password" name="login-password" placeholder="********" required="" type="password"/>
+     </div>
+     <button class="w-full bg-green-700 text-white font-semibold py-2 rounded hover:bg-green-800 transition" type="submit">
+      Login
+     </button>
+    </form>
+    <form class="space-y-4 hidden" id="register-form">
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="register-name">
+       Full Name
+      </label>
+      <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="register-name" name="register-name" placeholder="Your full name" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="register-phone">
+       Phone Number
+      </label>
+      <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="register-phone" name="register-phone" placeholder="+251 9XX XXX XXX" required="" type="tel"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="register-email">
+       Email
+      </label>
+      <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="register-email" name="register-email" placeholder="you@example.com" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="register-password">
+       Password
+      </label>
+      <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="register-password" name="register-password" placeholder="********" required="" type="password"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-1" for="register-role">
+       Role
+      </label>
+      <select class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" id="register-role" name="register-role" required="">
+       <option disabled="" selected="" value="">
+        Select your role
+       </option>
+       <option value="student">
+        Student
+       </option>
+       <option value="admin">
+        Admin
+       </option>
+       <option value="ustaaz">
+        Ustaaz
+       </option>
+      </select>
+     </div>
+     <button class="w-full bg-green-700 text-white font-semibold py-2 rounded hover:bg-green-800 transition" type="submit">
+      Register
+     </button>
+    </form>
+   </section>
+   <!-- Dashboard -->
+   <section class="mb-12" id="dashboard">
+    <h2 class="text-3xl font-semibold text-green-700 mb-6">
+     Dashboard
+    </h2>
+    <div class="bg-white rounded-lg shadow-md p-6">
+     <h3 class="text-xl font-semibold mb-4">
+      Welcome,
+      <span id="student-name">
+       Student
+      </span>
+      !
+     </h3>
+     <div class="mb-6">
+      <h4 class="text-lg font-semibold text-green-600 mb-2">
+       Latest Announcements
+      </h4>
+      <ul class="space-y-3 max-h-48 overflow-y-auto">
+       <li class="border border-green-200 rounded p-3 bg-green-50">
+        <p class="font-medium">
+         Ramadan Quran Recitation Competition
+        </p>
+        <p class="text-sm text-gray-700">
+         Join the competition starting April 10th. Register by April 5th.
+        </p>
+        <time class="text-xs text-gray-500">
+         Posted on March 28, 2024
+        </time>
+       </li>
+       <li class="border border-green-200 rounded p-3 bg-green-50">
+        <p class="font-medium">
+         New Tajweed Classes Available
+        </p>
+        <p class="text-sm text-gray-700">
+         Enroll in our advanced Tajweed sessions starting next week.
+        </p>
+        <time class="text-xs text-gray-500">
+         Posted on March 25, 2024
+        </time>
+       </li>
+       <li class="border border-green-200 rounded p-3 bg-green-50">
+        <p class="font-medium">
+         Website Maintenance Scheduled
+        </p>
+        <p class="text-sm text-gray-700">
+         Portal will be down for maintenance on April 1st from 1 AM to 4 AM.
+        </p>
+        <time class="text-xs text-gray-500">
+         Posted on March 20, 2024
+        </time>
+       </li>
+       <li class="border border-green-200 rounded p-3 bg-green-50">
+        <p class="font-medium">
+         New Audio Lectures Uploaded
+        </p>
+        <p class="text-sm text-gray-700">
+         Check out the latest audio lessons on Surah Al-Baqarah.
+        </p>
+        <time class="text-xs text-gray-500">
+         Posted on March 18, 2024
+        </time>
+       </li>
+       <li class="border border-green-200 rounded p-3 bg-green-50">
+        <p class="font-medium">
+         Eid Holiday Schedule
+        </p>
+        <p class="text-sm text-gray-700">
+         Classes will be paused from April 20th to April 25th for Eid celebrations.
+        </p>
+        <time class="text-xs text-gray-500">
+         Posted on March 15, 2024
+        </time>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-lg font-semibold text-green-600 mb-2">
+       Your Enrolled Classes
+      </h4>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+       <li class="border border-green-300 rounded p-4 bg-green-50">
+        <h5 class="font-semibold text-green-700">
+         Quran Recitation Level 1
+        </h5>
+        <p class="text-sm text-gray-700">
+         Instructor: Ustaaz Ahmed
+        </p>
+        <p class="text-sm text-gray-700">
+         Schedule: Mon &amp; Wed, 5:00 PM - 6:00 PM
+        </p>
+       </li>
+       <li class="border border-green-300 rounded p-4 bg-green-50">
+        <h5 class="font-semibold text-green-700">
+         Tafsir of Juz Amma
+        </h5>
+        <p class="text-sm text-gray-700">
+         Instructor: Ustaaz Fatima
+        </p>
+        <p class="text-sm text-gray-700">
+         Schedule: Tue &amp; Thu, 6:30 PM - 7:30 PM
+        </p>
+       </li>
+       <li class="border border-green-300 rounded p-4 bg-green-50">
+        <h5 class="font-semibold text-green-700">
+         Tajweed Advanced
+        </h5>
+        <p class="text-sm text-gray-700">
+         Instructor: Ustaaz Yusuf
+        </p>
+        <p class="text-sm text-gray-700">
+         Schedule: Sat, 4:00 PM - 6:00 PM
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </section>
+   <!-- Class Schedule -->
+   <section class="mb-12" id="schedule">
+    <h2 class="text-3xl font-semibold text-green-700 mb-6">
+     Class Schedule
+    </h2>
+    <div class="bg-white rounded-lg shadow-md p-6 overflow-x-auto">
+     <table class="min-w-full table-auto border-collapse border border-gray-300">
+      <thead class="bg-green-100">
+       <tr>
+        <th class="border border-gray-300 px-4 py-2 text-left">
+         Day
+        </th>
+        <th class="border border-gray-300 px-4 py-2 text-left">
+         Time
+        </th>
+        <th class="border border-gray-300 px-4 py-2 text-left">
+         Class
+        </th>
+        <th class="border border-gray-300 px-4 py-2 text-left">
+         Instructor
+        </th>
+        <th class="border border-gray-300 px-4 py-2 text-left">
+         Type
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="hover:bg-green-50">
+        <td class="border border-gray-300 px-4 py-2">
+         Monday
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         5:00 PM - 6:00 PM
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Quran Recitation Level 1
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Ustaaz Ahmed
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Quran
+        </td>
+       </tr>
+       <tr class="hover:bg-green-50 bg-green-50">
+        <td class="border border-gray-300 px-4 py-2">
+         Tuesday
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         6:30 PM - 7:30 PM
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Tafsir of Juz Amma
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Ustaaz Fatima
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Tafsir
+        </td>
+       </tr>
+       <tr class="hover:bg-green-50">
+        <td class="border border-gray-300 px-4 py-2">
+         Wednesday
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         5:00 PM - 6:00 PM
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Quran Recitation Level 1
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Ustaaz Ahmed
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Quran
+        </td>
+       </tr>
+       <tr class="hover:bg-green-50 bg-green-50">
+        <td class="border border-gray-300 px-4 py-2">
+         Thursday
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         6:30 PM - 7:30 PM
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Tafsir of Juz Amma
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Ustaaz Fatima
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Tafsir
+        </td>
+       </tr>
+       <tr class="hover:bg-green-50">
+        <td class="border border-gray-300 px-4 py-2">
+         Saturday
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         4:00 PM - 6:00 PM
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Tajweed Advanced
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Ustaaz Yusuf
+        </td>
+        <td class="border border-gray-300 px-4 py-2">
+         Tajweed
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </section>
+   <!-- Lesson Materials -->
+   <section class="mb-12" id="materials">
+    <h2 class="text-3xl font-semibold text-green-700 mb-6">
+     Lesson Materials
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <article class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+      <img alt="Cover image of PDF lesson material for Surah Al-Fatiha with Arabic calligraphy and green decorative border" class="rounded mb-4 object-cover h-40 w-full" height="200" src="https://storage.googleapis.com/a1aa/image/fcce23ed-c03f-4bb7-d62b-16ae5d9960a7.jpg" width="400"/>
+      <h3 class="font-semibold text-green-700 mb-2">
+       Surah Al-Fatiha PDF
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Download the detailed PDF lesson for Surah Al-Fatiha with translation and tajweed rules.
+      </p>
+      <a class="mt-4 inline-flex items-center justify-center bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition" href="#">
+       <i class="fas fa-file-pdf mr-2">
+       </i>
+       Download PDF
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+      <img alt="Audio lecture cover image for Surah Al-Baqarah with Quranic verses and green theme" class="rounded mb-4 object-cover h-40 w-full" height="200" src="https://storage.googleapis.com/a1aa/image/e4271fde-6051-457f-68ba-caf6359d365c.jpg" width="400"/>
+      <h3 class="font-semibold text-green-700 mb-2">
+       Surah Al-Baqarah Audio
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Listen to the detailed audio lecture explaining Surah Al-Baqarah with tajweed tips.
+      </p>
+      <a class="mt-4 inline-flex items-center justify-center bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition" href="#">
+       <i class="fas fa-headphones-alt mr-2">
+       </i>
+       Listen Audio
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+      <img alt="Video lecture thumbnail showing tajweed rules with Arabic script and green Quran academy branding" class="rounded mb-4 object-cover h-40 w-full" height="200" src="https://storage.googleapis.com/a1aa/image/9be707a5-2a2f-4a5b-18df-39de0d23e8b6.jpg" width="400"/>
+      <h3 class="font-semibold text-green-700 mb-2">
+       Tajweed Rules Video
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Watch the video lecture on tajweed rules for proper Quran recitation.
+      </p>
+      <a class="mt-4 inline-flex items-center justify-center bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition" href="#">
+       <i class="fas fa-video mr-2">
+       </i>
+       Watch Video
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+      <img alt="PDF cover image for Tafsir of Juz Amma with Arabic calligraphy and green decorative elements" class="rounded mb-4 object-cover h-40 w-full" height="200" src="https://storage.googleapis.com/a1aa/image/b42fabb3-c5fa-412b-550a-8d953965fd1e.jpg" width="400"/>
+      <h3 class="font-semibold text-green-700 mb-2">
+       Tafsir Juz Amma PDF
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Download the tafsir PDF for Juz Amma with detailed explanations.
+      </p>
+      <a class="mt-4 inline-flex items-center justify-center bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition" href="#">
+       <i class="fas fa-file-pdf mr-2">
+       </i>
+       Download PDF
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+      <img alt="Audio lecture cover image for Tajweed basics with Quranic script and green theme" class="rounded mb-4 object-cover h-40 w-full" height="200" src="https://storage.googleapis.com/a1aa/image/84575da5-d45f-4294-4940-039a2012a6b1.jpg" width="400"/>
+      <h3 class="font-semibold text-green-700 mb-2">
+       Tajweed Basics Audio
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Audio lecture covering the basics of tajweed for beginners.
+      </p>
+      <a class="mt-4 inline-flex items-center justify-center bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition" href="#">
+       <i class="fas fa-headphones-alt mr-2">
+       </i>
+       Listen Audio
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+      <img alt="Video lecture thumbnail showing Quran recitation session with instructor and green branding" class="rounded mb-4 object-cover h-40 w-full" height="200" src="https://storage.googleapis.com/a1aa/image/1c09ffcd-4756-4aa8-dfcd-80815ec52995.jpg" width="400"/>
+      <h3 class="font-semibold text-green-700 mb-2">
+       Quran Recitation Video
+      </h3>
+      <p class="text-gray-700 flex-grow">
+       Watch the video lecture on proper Quran recitation techniques.
+      </p>
+      <a class="mt-4 inline-flex items-center justify-center bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition" href="#">
+       <i class="fas fa-video mr-2">
+       </i>
+       Watch Video
+      </a>
+     </article>
+    </div>
+   </section>
+   <!-- Live Class Access -->
+   <section class="mb-12" id="live-class">
+    <h2 class="text-3xl font-semibold text-green-700 mb-6">
+     Live Class Access
+    </h2>
+    <div class="bg-white rounded-lg shadow-md p-6 space-y-6">
+     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between border border-green-300 rounded p-4 bg-green-50">
+      <div>
+       <h3 class="text-xl font-semibold text-green-700">
+        IMO Voice Club
+       </h3>
+       <p class="text-gray-700">
+        Join live Quran recitation and discussion sessions on IMO Voice Club.
+       </p>
+       <p class="text-sm text-gray-600 mt-1">
+        Next session: April 3, 2024, 5:00 PM EAT
+       </p>
+      </div>
+      <a class="mt-4 sm:mt-0 inline-flex items-center bg-green-700 text-white px-5 py-2 rounded hover:bg-green-800 transition" href="https://imo.im" rel="noopener" target="_blank">
+       <i class="fab fa-imo mr-2">
+       </i>
+       Join IMO Voice Club
+      </a>
+     </div>
+     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between border border-green-300 rounded p-4 bg-green-50">
+      <div>
+       <h3 class="text-xl font-semibold text-green-700">
+        Zoom Live Classes
+       </h3>
+       <p class="text-gray-700">
+        Access live classes via Zoom for interactive Quran lessons.
+       </p>
+       <p class="text-sm text-gray-600 mt-1">
+        Next session: April 4, 2024, 6:30 PM EAT
+       </p>
+      </div>
+      <a class="mt-4 sm:mt-0 inline-flex items-center bg-green-700 text-white px-5 py-2 rounded hover:bg-green-800 transition" href="https://zoom.us/j/1234567890" rel="noopener" target="_blank">
+       <i class="fas fa-video mr-2">
+       </i>
+       Join Zoom Class
+      </a>
+     </div>
+    </div>
+   </section>
+   <!-- Assignments & Submissions -->
+   <section class="mb-12" id="assignments">
+    <h2 class="text-3xl font-semibold text-green-700 mb-6">
+     Assignments &amp; Submissions
+    </h2>
+    <div class="bg-white rounded-lg shadow-md p-6">
+     <ul class="space-y-6 max-h-96 overflow-y-auto">
+      <li class="border border-green-300 rounded p-4 bg-green-50 flex flex-col sm:flex-row sm:justify-between sm:items-center">
+       <div>
+        <h3 class="font-semibold text-green-700">
+         Memorize Surah Al-Fatiha
+        </h3>
+        <p class="text-gray-700">
+         Submit an audio recording of your recitation.
+        </p>
+        <p class="text-sm text-gray-600">
+         Due Date: April 10, 2024
+        </p>
+       </div>
+       <form class="mt-4 sm:mt-0 flex items-center space-x-3" enctype="multipart/form-data">
+        <input accept="audio/*" class="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-500" required="" type="file"/>
+        <button class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition" type="submit">
+         Submit
+        </button>
+       </form>
+      </li>
+      <li class="border border-green-300 rounded p-4 bg-green-50 flex flex-col sm:flex-row sm:justify-between sm:items-center">
+       <div>
+        <h3 class="font-semibold text-green-700">
+         Write Tafsir Summary of Juz Amma
+        </h3>
+        <p class="text-gray-700">
+         Upload a PDF document summarizing the tafsir lessons.
+        </p>
+        <p class="text-sm text-gray-600">
+         Due Date: April 15, 2024
+        </p>
+       </div>
+       <form class="mt-4 sm:mt-0 flex items-center space-x-3" enctype="multipart/form-data">
+        <input accept="application/pdf" class="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-500" required="" type="file"/>
+        <button class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition" type="submit">
+         Submit
+        </button>
+       </form>
+      </li>
+      <li class="border border-green-300 rounded p-4 bg-green-50 flex flex-col sm:flex-row sm:justify-between sm:items-center">
+       <div>
+        <h3 class="font-semibold text-green-700">
+         Tajweed Practice Video
+        </h3>
+        <p class="text-gray-700">
+         Upload a video demonstrating your tajweed skills.
+        </p>
+        <p class="text-sm text-gray-600">
+         Due Date: April 20, 2024
+        </p>
+       </div>
+       <form class="mt-4 sm:mt-0 flex items-center space-x-3" enctype="multipart/form-data">
+        <input accept="video/*" class="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-500" required="" type="file"/>
+        <button class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition" type="submit">
+         Submit
+        </button>
+       </form>
+      </li>
+     </ul>
+    </div>
+   </section>
+   <!-- Progress Tracker -->
+   <section class="mb-12" id="progress">
+    <h2 class="text-3xl font-semibold text-green-700 mb-6">
+     Progress Tracker
+    </h2>
+    <div class="bg-white rounded-lg shadow-md p-6 space-y-8">
+     <div>
+      <h3 class="text-xl font-semibold text-green-700 mb-4">
+       Grades
+      </h3>
+      <table class="min-w-full table-auto border-collapse border border-gray-300">
+       <thead class="bg-green-100">
+        <tr>
+         <th class="border border-gray-300 px-4 py-2 text-left">
+          Subject
+         </th>
+         <th class="border border-gray-300 px-4 py-2 text-left">
+          Grade
+         </th>
+         <th class="border border-gray-300 px-4 py-2 text-left">
+          Comments
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr class="hover:bg-green-50">
+         <td class="border border-gray-300 px-4 py-2">
+          Quran Recitation
+         </td>
+         <td class="border border-gray-300 px-4 py-2 font-semibold text-green-700">
+          A
+         </td>
+         <td class="border border-gray-300 px-4 py-2">
+          Excellent tajweed and fluency
+         </td>
+        </tr>
+        <tr class="hover:bg-green-50 bg-green-50">
+         <td class="border border-gray-300 px-4 py-2">
+          Tafsir
+         </td>
+         <td class="border border-gray-300 px-4 py-2 font-semibold text-green-700">
+          B+
+         </td>
+         <td class="border border-gray-300 px-4 py-2">
+          Good understanding, needs more practice
+         </td>
+        </tr>
+        <tr class="hover:bg-green-50">
+         <td class="border border-gray-300 px-4 py-2">
+          Tajweed
+         </td>
+         <td class="border border-gray-300 px-4 py-2 font-semibold text-green-700">
+          A-
+         </td>
+         <td class="border border-gray-300 px-4 py-2">
+          Strong progress in articulation
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div>
+      <h3 class="text-xl font-semibold text-green-700 mb-4">
+       Tajweed Badges
+      </h3>
+      <div class="flex flex-wrap gap-4">
+       <div class="flex flex-col items-center bg-green-50 border border-green-300 rounded p-4 w-32">
+        <img alt="Tajweed badge icon showing a green shield with Arabic letter and decorative pattern" class="mb-2" height="64" src="https://storage.googleapis.com/a1aa/image/2c402578-8c19-494d-85a4-268d701d5b6c.jpg" width="64"/>
+        <span class="text-green-700 font-semibold text-center">
+         Makharij
+        </span>
+       </div>
+       <div class="flex flex-col items-center bg-green-50 border border-green-300 rounded p-4 w-32">
+        <img alt="Tajweed badge icon showing a green star with Arabic script and ornamental design" class="mb-2" height="64" src="https://storage.googleapis.com/a1aa/image/daf204cc-12ec-4133-0a84-62da78b4ed6e.jpg" width="64"/>
+        <span class="text-green-700 font-semibold text-center">
+         Sifaat
+        </span>
+       </div>
+       <div class="flex flex-col items-center bg-green-50 border border-green-300 rounded p-4 w-32">
+        <img alt="Tajweed badge icon showing a green book with Arabic calligraphy and decorative border" class="mb-2" height="64" src="https://storage.googleapis.com/a1aa/image/097edc6e-d28c-403b-0e41-1eabcde49e47.jpg" width="64"/>
+        <span class="text-green-700 font-semibold text-center">
+         Rules Mastery
+        </span>
+       </div>
+      </div>
+     </div>
+     <div>
+      <h3 class="text-xl font-semibold text-green-700 mb-4">
+       Attendance
+      </h3>
+      <div class="w-full bg-green-100 rounded-full h-6 overflow-hidden">
+       <div class="bg-green-700 h-6 rounded-full" style="width: 85%">
+       </div>
+      </div>
+      <p class="mt-2 text-green-700 font-semibold">
+       85% attendance this semester
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Student ID Download -->
+   <section class="mb-12" id="student-id">
+    <h2 class="text-3xl font-semibold text-green-700 mb-6">
+     Student ID Download
+    </h2>
+    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center space-y-6">
+     <img alt="Student photo placeholder for ID card, portrait of a young student with Quran academy green background" class="rounded-lg shadow-md w-48 h-64 object-cover" height="320" src="https://storage.googleapis.com/a1aa/image/9339dc5c-b85b-45b9-2377-c6af828b8a9e.jpg" width="240"/>
+     <div class="text-center">
+      <h3 class="text-xl font-semibold text-green-700 mb-1" id="id-student-name">
+       Student Name
+      </h3>
+      <p class="text-gray-700 mb-1" id="id-student-role">
+       Role: Student
+      </p>
+      <p class="text-gray-700 mb-1" id="id-student-id">
+       ID: MNQ-2024-00123
+      </p>
+     </div>
+     <img alt="QR code placeholder for student ID linking to student profile and portal access" class="w-28 h-28" height="120" src="https://storage.googleapis.com/a1aa/image/6b63344d-729c-40e1-2012-8e28b9377c13.jpg" width="120"/>
+     <button class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-800 transition font-semibold" id="download-id-btn">
+      Download ID PDF
+     </button>
+    </div>
+   </section>
+   <!-- Multilingual Support -->
+   <section class="mb-12 max-w-md mx-auto bg-white rounded-lg shadow-md p-6" id="multilingual">
+    <h2 class="text-3xl font-semibold text-green-700 mb-6 text-center">
+     Multilingual Support
+    </h2>
+    <form class="flex justify-center space-x-4" id="language-form">
+     <label class="inline-flex items-center cursor-pointer">
+      <input class="form-radio text-green-700" name="language" type="radio" value="afaan-oromo"/>
+      <span class="ml-2 text-gray-700 font-medium">
+       Afaan Oromo
+      </span>
+     </label>
+     <label class="inline-flex items-center cursor-pointer">
+      <input class="form-radio text-green-700" name="language" type="radio" value="arabic"/>
+      <span class="ml-2 text-gray-700 font-medium">
+       Arabic
+      </span>
+     </label>
+     <label class="inline-flex items-center cursor-pointer">
+      <input checked="" class="form-radio text-green-700" name="language" type="radio" value="english"/>
+      <span class="ml-2 text-gray-700 font-medium">
+       English
+      </span>
+     </label>
+    </form>
+   </section>
+   <!-- Notifications -->
+   <section class="mb-12 max-w-3xl mx-auto" id="notifications">
+    <h2 class="text-3xl font-semibold text-green-700 mb-6">
+     Notifications
+    </h2>
+    <div class="bg-white rounded-lg shadow-md p-6 max-h-96 overflow-y-auto space-y-4">
+     <div class="border border-green-300 rounded p-4 bg-green-50 flex items-start space-x-4">
+      <i class="fas fa-bell text-green-700 text-2xl mt-1">
+      </i>
+      <div>
+       <p class="font-semibold text-green-700">
+        Class Reminder: Quran Recitation
+       </p>
+       <p class="text-gray-700">
+        Your Quran Recitation class starts tomorrow at 5:00 PM.
+       </p>
+       <time class="text-xs text-gray-500">
+        March 31, 2024 08:00 AM
+       </time>
+      </div>
+     </div>
+     <div class="border border-green-300 rounded p-4 bg-green-50 flex items-start space-x-4">
+      <i class="fas fa-bell text-green-700 text-2xl mt-1">
+      </i>
+      <div>
+       <p class="font-semibold text-green-700">
+        New Announcement: Ramadan Competition
+       </p>
+       <p class="text-gray-700">
+        Register now for the Ramadan Quran Recitation Competition.
+       </p>
+       <time class="text-xs text-gray-500">
+        March 28, 2024 10:00 AM
+       </time>
+      </div>
+     </div>
+     <div class="border border-green-300 rounded p-4 bg-green-50 flex items-start space-x-4">
+      <i class="fas fa-bell text-green-700 text-2xl mt-1">
+      </i>
+      <div>
+       <p class="font-semibold text-green-700">
+        Event: Eid Holiday Schedule
+       </p>
+       <p class="text-gray-700">
+        Classes will be paused from April 20th to April 25th for Eid.
+       </p>
+       <time class="text-xs text-gray-500">
+        March 15, 2024 09:00 AM
+       </time>
+      </div>
+     </div>
+     <div class="border border-green-300 rounded p-4 bg-green-50 flex items-start space-x-4">
+      <i class="fas fa-bell text-green-700 text-2xl mt-1">
+      </i>
+      <div>
+       <p class="font-semibold text-green-700">
+        Assignment Due: Memorize Surah Al-Fatiha
+       </p>
+       <p class="text-gray-700">
+        Submit your audio recording by April 10th.
+       </p>
+       <time class="text-xs text-gray-500">
+        March 10, 2024 11:00 AM
+       </time>
+      </div>
+     </div>
+     <div class="border border-green-300 rounded p-4 bg-green-50 flex items-start space-x-4">
+      <i class="fas fa-bell text-green-700 text-2xl mt-1">
+      </i>
+      <div>
+       <p class="font-semibold text-green-700">
+        System Maintenance
+       </p>
+       <p class="text-gray-700">
+        Portal will be down on April 1st from 1 AM to 4 AM.
+       </p>
+       <time class="text-xs text-gray-500">
+        March 5, 2024 07:00 AM
+       </time>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-6 mt-auto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+    © 2024 Markaza Nurul Yaqiin Online Quran Academy. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Login/Register tab toggle
+    const loginTab = document.getElementById('login-tab');
+    const registerTab = document.getElementById('register-tab');
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    loginTab.addEventListener('click', () => {
+      loginTab.classList.add('border-green-700', 'text-green-700');
+      loginTab.classList.remove('text-gray-500', 'border-transparent');
+      registerTab.classList.remove('border-green-700', 'text-green-700');
+      registerTab.classList.add('text-gray-500', 'border-transparent');
+      loginForm.classList.remove('hidden');
+      registerForm.classList.add('hidden');
+    });
+
+    registerTab.addEventListener('click', () => {
+      registerTab.classList.add('border-green-700', 'text-green-700');
+      registerTab.classList.remove('text-gray-500', 'border-transparent');
+      loginTab.classList.remove('border-green-700', 'text-green-700');
+      loginTab.classList.add('text-gray-500', 'border-transparent');
+      registerForm.classList.remove('hidden');
+      loginForm.classList.add('hidden');
+    });
+
+    // Dummy student name update on login (for demo)
+    loginForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const name = email.split('@')[0].replace('.', ' ').replace(/^\w/, c => c.toUpperCase());
+      document.getElementById('student-name').textContent = name;
+      document.getElementById('id-student-name').textContent = name;
+      document.getElementById('id-student-role').textContent = 'Role: Student';
+      document.getElementById('id-student-id').textContent = 'ID: MNQ-2024-00123';
+      alert('Login successful! Dashboard updated.');
+      window.location.hash = '#dashboard';
+    });
+
+    // Dummy registration form submit
+    registerForm.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Registration successful! Please login.');
+      loginTab.click();
+    });
+
+    // Download ID PDF button dummy action
+    document.getElementById('download-id-btn').addEventListener('click', () => {
+      alert('Student ID PDF download feature coming soon.');
+    });
+
+    // Language selection dummy
+    const languageForm = document.getElementById('language-form');
+    languageForm.addEventListener('change', e => {
+      alert(`Language changed to: ${e.target.value.replace('-', ' ')}`);
+    });
+  </script>
+ </body>
+</html>
